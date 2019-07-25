@@ -27,9 +27,6 @@ gulp.task('compile', function() {
 			.pipe(gulp.dest(paths.dist))
 	}
 
-	bundler = watchify(bundler);
-	bundler.on('update', bundle);
-
 	return bundle();
 });
 
